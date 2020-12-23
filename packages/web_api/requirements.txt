@@ -1,0 +1,6 @@
+# server
+flask==1.1.2
+
+# local classifier_model package
+# update with your local path
+-e "/Users/metra4ok/Documents/Учеба/ПОСИИ/hotdog-or-not/packages/cnn_model"
