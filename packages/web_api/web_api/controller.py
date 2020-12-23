@@ -27,4 +27,26 @@ def version():
                         'api_version': api_version})
 
 
+@prediction_app.route('/v1/predict', methods=['POST'])
+def predict():
+    if request.method == 'POST':
+        json_data = request.get_json()
+        _logger.info(f'Inputs: {json_data}')
 
+        img_url = json_data.get("img_url")
+        img_id = json_data.get("img_id")
+
+        result = make_prediction(img_url=img_url, img_id=img_id)
+        _logger.info(f'Outputs: {result}')
+
+        prediction = result.get('prediction')
+        score = float(result.get('score'))
+        version = result.get('version')
+
+        # TODO: обработка ошибок
+        errors = None
+
+        return jsonify({'prediction': prediction,
+                        'score': score,
+                        'version': version,
+                        'errors': errors})
