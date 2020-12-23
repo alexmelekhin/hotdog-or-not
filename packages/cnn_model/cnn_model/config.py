@@ -10,4 +10,5 @@ MODEL_PATH = os.path.join(PACKAGE_ROOT, 'saved_models/cnn_model')
 IMG_SIZE = (200, 200)
 NUM_CLASSES = 2
 EPOCHS = 10
+CLASS_NAMES = ["hotdog", "nothotdog"]
 
