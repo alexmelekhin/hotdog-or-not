@@ -19,3 +19,12 @@ def health():
         _logger.info('health status ok')
         return 'ok'
 
+
+@prediction_app.route('/version', methods=['GET'])
+def version():
+    if request.method == 'GET':
+        return jsonify({'model_version': model_version,
+                        'api_version': api_version})
+
+
+

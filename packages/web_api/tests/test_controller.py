@@ -13,3 +13,14 @@ def test_health_endpoint_returns_200(flask_test_client):
     # Then
     assert response.status_code == 200
 
+
+def test_version_endpoint_returns_version(flask_test_client):
+    # When
+    response = flask_test_client.get('/version')
+
+    # Then
+    assert response.status_code == 200
+    response_json = json.loads(response.data)
+    assert response_json['model_version'] == model_version
+    assert response_json['api_version'] == api_version
+
