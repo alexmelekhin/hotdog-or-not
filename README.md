@@ -2,7 +2,7 @@
 
 Курсовая работа по дисциплине ПОСИИ
 
-Ссылка на используемый датасет: <https://drive.google.com/drive/folders/1RTz-jvqyP-4uxTkOSNaE7dEx1gdc_mEP?usp=sharing>
+Ссылка на используемый датасет: <https://hotdogdetectorbucket.s3.amazonaws.com/train_dataset/dataset.zip>
 
 ## Описание
 
